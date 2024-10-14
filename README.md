@@ -9,8 +9,13 @@ You must have an OpenAI API key that has access to the Realtime API.  Specify it
 OPENAI_API_KEY=sk-proj-XXXXXXX node app.js
 ```
 
+## Prerequisites
+This application requires a jambonz server running release 0.9.2-rc3 or above.
+
 ## Configuring the assistant
-All of the configuration can be found [here](./lib/routes/openai-s2s.js). You can see that application first answers the call, pauses one second, and the connects to the OpenAI Realtime API using the jambonz `llm` verb.  We specify the vendor and model, and provide options specific to that LLM (in this case gpt-4o-realtime-preview-2024-10-01) in the `llmOptions` property.
+All of the configuration (in fact, all of the code for this application) can be found [in this source file](./lib/routes/openai-s2s.js). This is the file you will want to edit as you play with this example.
+
+You can see that application first answers the call, pauses one second, and the connects to the OpenAI Realtime API using the jambonz `llm` verb.  We specify the vendor and model, and provide options specific to that LLM (in this case gpt-4o-realtime-preview-2024-10-01) in the `llmOptions` property.
 
 In the case of the OpenAI Realtime API, configuration is provided in the form of the [response_create](https://platform.openai.com/docs/api-reference/realtime-client-events/response-create) and [session_update](https://platform.openai.com/docs/api-reference/realtime-client-events/response-create) client events that are sent to OpenAI.  These specify the instructions to the assistant as well as things like vad and function calling options.
 
