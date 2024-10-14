@@ -13,7 +13,7 @@ OPENAI_API_KEY=sk-proj-XXXXXXX node app.js
 This application requires a jambonz server running release 0.9.2-rc3 or above.
 
 ## Configuring the assistant
-All of the configuration (in fact, all of the code for this application) can be found [in this source file](./lib/routes/openai-s2s.js). This is the file you will want to edit as you play with this example.
+All of the configuration (in fact, all of the relevant code) can be found [in this source file](./lib/routes/openai-s2s.js). This is the file you will want to edit as you play with this example.
 
 You can see that application first answers the call, pauses one second, and the connects to the OpenAI Realtime API using the jambonz `llm` verb.  We specify the vendor and model, and provide options specific to that LLM (in this case gpt-4o-realtime-preview-2024-10-01) in the `llmOptions` property.
 
