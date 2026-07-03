@@ -13,6 +13,7 @@ module.exports = [
         __dirname: "readonly",
         process: "readonly",
         Buffer: "readonly",
+        fetch: "readonly",
         // Other global variables you may need
         DTRACE_HTTP_CLIENT_REQUEST: "readonly",
         LTTNG_HTTP_CLIENT_REQUEST: "readonly",
