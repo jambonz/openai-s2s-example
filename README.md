@@ -19,7 +19,7 @@ OPENAI_API_KEY=sk-proj-XXXXXXX node app.js
 ## Configuring the assistant
 All of the configuration (in fact, all of the relevant code) can be found [in this source file](./lib/routes/openai-s2s.js). This is the file you will want to edit as you play with this example.
 
-You can see that the application first answers the call, pauses one second, and then connects to the OpenAI Realtime API using the jambonz `llm` verb.  We specify the vendor and model, and provide options specific to that LLM (in this case `gpt-realtime`) in the `llmOptions` property.
+You can see that the application first answers the call, pauses one second, and then connects to the OpenAI Realtime API using the jambonz `llm` verb.  We specify the vendor and model, and provide options specific to that LLM (in this case `gpt-realtime-2.1`) in the `llmOptions` property.
 
 In the case of the OpenAI Realtime API, configuration is provided in the form of the [response_create](https://platform.openai.com/docs/api-reference/realtime-client-events/response-create) and [session_update](https://platform.openai.com/docs/api-reference/realtime-client-events/response-create) client events that are sent to OpenAI.  These specify the instructions to the assistant as well as things like vad and function calling options.
 
